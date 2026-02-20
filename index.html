@@ -1,236 +1,260 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta name="description" content="PHK Ventures — Strategic Investment Arm for Robotics, Space, Energy, and Financial Infrastructure."/>
-  <title>PHK Ventures</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HK Ventures | Global Investment Platform</title>
 
-  <style>
-    :root{
-      --bg:#070b12;
-      --card:#0f172a;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --line:#1f2937;
-      --accent:#a78bfa;
-      --accent2:#22c55e;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
-      background:
-        radial-gradient(1100px 700px at 15% 0%, #1b1645 0%, var(--bg) 60%),
-        radial-gradient(900px 600px at 85% 10%, #0d2a1c 0%, var(--bg) 65%);
-      color:var(--text);
-      line-height:1.6;
-    }
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{
-      display:flex;justify-content:space-between;align-items:center;gap:12px;
-      padding:14px 16px;border:1px solid var(--line);border-radius:16px;
-      background:rgba(15,23,42,.75);backdrop-filter:blur(10px)
-    }
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{
-      width:40px;height:40px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow:0 12px 36px rgba(167,139,250,.35)
-    }
-    .brand h1{margin:0;font-size:16px}
-    .brand p{margin:2px 0 0;font-size:12px;color:var(--muted)}
-    .lang{
-      display:flex;gap:6px;padding:6px;border:1px solid var(--line);
-      border-radius:14px;background:rgba(15,23,42,.55)
-    }
-    .lang button{
-      background:transparent;border:1px solid transparent;color:var(--text);
-      padding:8px 10px;border-radius:12px;font-size:12px;cursor:pointer;opacity:.85
-    }
-    .lang button.active{
-      background:rgba(167,139,250,.2);
-      border-color:rgba(167,139,250,.4);
-      opacity:1
-    }
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
-    @media(max-width:900px){.hero{grid-template-columns:1fr}}
-    .card{
-      border:1px solid var(--line);border-radius:18px;
-      background:rgba(15,23,42,.75);padding:18px
-    }
-    .headline{margin:0 0 10px;font-size:28px}
-    .sub{margin:0 0 14px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    @media(max-width:700px){.grid{grid-template-columns:1fr}}
-    .mini{
-      border:1px solid var(--line);border-radius:16px;
-      padding:14px;background:rgba(17,24,39,.6)
-    }
-    .mini h3{margin:0 0 6px;font-size:14px}
-    .mini p{margin:0;font-size:13px;color:var(--muted)}
-    footer{
-      margin-top:18px;padding:14px;border:1px solid var(--line);
-      border-radius:16px;background:rgba(15,23,42,.55);
-      display:flex;justify-content:space-between;flex-wrap:wrap;
-      font-size:12px;color:var(--muted)
-    }
-    .hide{display:none}
-    [dir="rtl"]{text-align:right}
-  </style>
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#000000,#141e30,#1f1c2c,#243b55);
+    color:white;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 30px;
+}
+
+h1{
+    font-size:64px;
+    background: linear-gradient(90deg,#00f5ff,#00ff94,#7b2cff,#ff00cc,#00c3ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    font-size:22px;
+    color:#cccccc;
+    margin-bottom:80px;
+}
+
+.section{
+    margin-bottom:90px;
+}
+
+.section h2{
+    font-size:30px;
+    color:#00ffe7;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    padding-bottom:12px;
+    margin-bottom:25px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background: rgba(255,255,255,0.06);
+    padding:35px;
+    border-radius:20px;
+    border:1px solid rgba(0,255,231,0.3);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    border-color:#00ffe7;
+    box-shadow:0 0 30px #00ffe7;
+}
+
+.language-buttons{
+    position:absolute;
+    top:25px;
+    right:40px;
+}
+
+.language-buttons button{
+    background:transparent;
+    border:1px solid #00ffe7;
+    color:#00ffe7;
+    padding:8px 15px;
+    margin-left:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.language-buttons button:hover{
+    background:#00ffe7;
+    color:black;
+}
+
+.footer{
+    margin-top:120px;
+    font-size:16px;
+    color:#aaaaaa;
+    border-top:1px solid rgba(255,255,255,0.2);
+    padding-top:35px;
+}
+</style>
+
+<script>
+function changeLanguage(lang){
+
+const content = {
+
+ko:{
+title:"HK Ventures",
+subtitle:"글로벌 혁신 기업에 투자하는 전략 벤처 플랫폼",
+overview:"HK Ventures는 차세대 기술 기업에 투자하는 글로벌 벤처 투자 그룹으로 AI, 로보틱스, 디지털 금융, 친환경 에너지, 첨단소재 및 미래 산업 전반에 전략적으로 투자합니다.",
+strategy:"투자 전략",
+strategyText:"초기 스타트업부터 성장 단계 기업까지 단계별 맞춤 투자 및 글로벌 네트워크 확장 지원.",
+focus:[
+"AI & Robotics Deep Tech",
+"Web3 & Digital Assets",
+"Green Energy & Climate Tech",
+"Advanced Materials & Smart Manufacturing",
+"Global Infrastructure & Strategic Projects"
+],
+fund:"펀드 구조",
+fundText:"글로벌 공동 투자 펀드, 전략적 합작 투자(JV), 국가 프로젝트 연계 투자 모델 운영.",
+vision:"Vision 2040",
+visionText:"혁신 기업과 함께 미래 산업을 창조하는 글로벌 투자 리더.",
+contact:"문의: info@hkventures.com"
+},
+
+en:{
+title:"HK Ventures",
+subtitle:"Strategic Venture Platform Investing in Global Innovation",
+overview:"HK Ventures is a global venture investment group focused on next-generation technologies including AI, robotics, digital finance, green energy and advanced materials.",
+strategy:"Investment Strategy",
+strategyText:"Stage-based investments from early startups to growth-stage companies with global network expansion support.",
+focus:[
+"AI & Robotics Deep Tech",
+"Web3 & Digital Assets",
+"Green Energy & Climate Tech",
+"Advanced Materials & Smart Manufacturing",
+"Global Infrastructure & Strategic Projects"
+],
+fund:"Fund Structure",
+fundText:"Global co-investment funds, strategic joint ventures and sovereign-linked project investments.",
+vision:"Vision 2040",
+visionText:"Creating the Future Industries with Innovative Founders.",
+contact:"Contact: info@hkventures.com"
+},
+
+zh:{
+title:"HK Ventures",
+subtitle:"投资全球创新企业的战略风险投资平台",
+overview:"HK Ventures是一家专注于人工智能、机器人、数字金融、绿色能源和先进材料的全球风险投资集团。",
+strategy:"投资战略",
+strategyText:"覆盖早期创业公司到成长型企业，提供阶段性资本与全球网络支持。",
+focus:[
+"AI与机器人技术",
+"Web3与数字资产",
+"绿色能源与气候科技",
+"先进材料与智能制造",
+"全球基础设施与战略项目"
+],
+fund:"基金结构",
+fundText:"全球联合投资基金、战略合资及国家级项目合作投资。",
+vision:"2040愿景",
+visionText:"与创新企业共同创造未来产业。",
+contact:"联系: info@hkventures.com"
+},
+
+ar:{
+title:"HK Ventures",
+subtitle:"منصة استثمارية استراتيجية في الشركات المبتكرة عالمياً",
+overview:"HK Ventures هي مجموعة استثمار رأس مال جريء تركز على الذكاء الاصطناعي والروبوتات والتمويل الرقمي والطاقة الخضراء والمواد المتقدمة.",
+strategy:"استراتيجية الاستثمار",
+strategyText:"استثمارات مرحلية من الشركات الناشئة إلى شركات النمو مع دعم شبكة عالمية.",
+focus:[
+"تقنيات الذكاء الاصطناعي والروبوتات",
+"Web3 والأصول الرقمية",
+"الطاقة الخضراء وتقنيات المناخ",
+"المواد المتقدمة والتصنيع الذكي",
+"البنية التحتية والمشاريع الاستراتيجية"
+],
+fund:"هيكل الصناديق",
+fundText:"صناديق استثمار مشتركة عالمية وشراكات استراتيجية ومشاريع سيادية.",
+vision:"رؤية 2040",
+visionText:"صناعة مستقبل الصناعات مع رواد الابتكار.",
+contact:"للتواصل: info@hkventures.com"
+}
+};
+
+document.getElementById("title").innerText=content[lang].title;
+document.getElementById("subtitle").innerText=content[lang].subtitle;
+document.getElementById("overview").innerText=content[lang].overview;
+document.getElementById("strategyTitle").innerText=content[lang].strategy;
+document.getElementById("strategyText").innerText=content[lang].strategyText;
+document.getElementById("fundTitle").innerText=content[lang].fund;
+document.getElementById("fundText").innerText=content[lang].fundText;
+document.getElementById("visionTitle").innerText=content[lang].vision;
+document.getElementById("visionText").innerText=content[lang].visionText;
+document.getElementById("contact").innerText=content[lang].contact;
+
+let grid=document.getElementById("focusList");
+grid.innerHTML="";
+content[lang].focus.forEach(item=>{
+let div=document.createElement("div");
+div.className="card";
+div.innerText=item;
+grid.appendChild(div);
+});
+
+if(lang=="ar"){document.body.style.direction="rtl";}
+else{document.body.style.direction="ltr";}
+}
+</script>
 </head>
 
 <body>
-<div class="wrap">
 
-<header>
-  <div class="brand">
-    <div class="logo"></div>
-    <div>
-      <h1>PHK Ventures</h1>
-      <p id="tagline">Strategic Capital & Long-term Value</p>
-    </div>
-  </div>
-  <div class="lang">
-    <button id="en" class="active" onclick="setLang('en')">EN</button>
-    <button id="ko" onclick="setLang('ko')">KO</button>
-    <button id="ar" onclick="setLang('ar')">AR</button>
-  </div>
-</header>
+<div class="language-buttons">
+<button onclick="changeLanguage('ko')">한국어</button>
+<button onclick="changeLanguage('en')">English</button>
+<button onclick="changeLanguage('zh')">中文</button>
+<button onclick="changeLanguage('ar')">العربية</button>
+</div>
 
-<!-- EN -->
-<main id="en-c" class="hero">
-  <section class="card">
-    <h2 class="headline">Capital that builds industries.</h2>
-    <p class="sub">
-      PHK Ventures is the strategic investment arm of the PHK ecosystem,
-      allocating capital to robotics, space, energy, and financial infrastructure
-      with a long-term industrial vision.
-    </p>
-    <ul class="sub">
-      <li>Strategic equity investments</li>
-      <li>Majority / controlling stakes</li>
-      <li>Industrial-scale project financing</li>
-      <li>Ecosystem synergies across PHK group</li>
-    </ul>
-  </section>
+<div class="container">
 
-  <aside class="card">
-    <h3>Investment Focus</h3>
-    <div class="grid">
-      <div class="mini"><h3>Robotics & AI</h3><p>Industrial, logistics, medical, humanoid platforms</p></div>
-      <div class="mini"><h3>Space Industry</h3><p>Launch, orbital robotics, infrastructure automation</p></div>
-      <div class="mini"><h3>Energy & Infrastructure</h3><p>Advanced energy, large-scale facilities</p></div>
-      <div class="mini"><h3>Financial Platforms</h3><p>Banking, digital finance, infrastructure capital</p></div>
-    </div>
-  </aside>
+<h1 id="title">HK Ventures</h1>
+<div class="subtitle" id="subtitle"></div>
 
-  <section class="card" style="grid-column:1/-1">
-    <h3>Contact</h3>
-    <p>
-      Investment & partnership inquiries:
-      <br/>
-      <a href="mailto:info@phkventures.com" style="color:var(--accent)">
-        info@phkventures.com
-      </a>
-    </p>
-  </section>
-</main>
+<div class="section">
+<h2>Overview</h2>
+<p id="overview"></p>
+</div>
 
-<!-- KO -->
-<main id="ko-c" class="hero hide">
-  <section class="card">
-    <h2 class="headline">산업을 만드는 자본.</h2>
-    <p class="sub">
-      PHK Ventures는 PHK 그룹의 전략 투자 조직으로,
-      로봇·우주·에너지·금융 인프라 분야에 장기 산업 관점의
-      자본을 집행합니다.
-    </p>
-    <ul class="sub">
-      <li>전략적 지분 투자</li>
-      <li>경영권·지배 지분 확보</li>
-      <li>대규모 산업 프로젝트 금융</li>
-      <li>PHK 그룹 시너지 극대화</li>
-    </ul>
-  </section>
+<div class="section">
+<h2 id="strategyTitle"></h2>
+<p id="strategyText"></p>
+</div>
 
-  <aside class="card">
-    <h3>투자 분야</h3>
-    <div class="grid">
-      <div class="mini"><h3>로보틱스·AI</h3><p>산업·물류·의료·휴머노이드</p></div>
-      <div class="mini"><h3>우주산업</h3><p>발사·궤도·인프라 자동화</p></div>
-      <div class="mini"><h3>에너지·인프라</h3><p>차세대 에너지·대형 설비</p></div>
-      <div class="mini"><h3>금융 플랫폼</h3><p>은행·디지털 금융 인프라</p></div>
-    </div>
-  </aside>
+<div class="section">
+<h2>Investment Focus</h2>
+<div class="grid" id="focusList"></div>
+</div>
 
-  <section class="card" style="grid-column:1/-1">
-    <h3>문의</h3>
-    <p>
-      투자 및 파트너십 문의:
-      <br/>
-      <a href="mailto:info@phkventures.com" style="color:var(--accent)">
-        info@phkventures.com
-      </a>
-    </p>
-  </section>
-</main>
+<div class="section">
+<h2 id="fundTitle"></h2>
+<p id="fundText"></p>
+</div>
 
-<!-- AR -->
-<main id="ar-c" class="hero hide" dir="rtl">
-  <section class="card">
-    <h2 class="headline">رأس مال يبني الصناعات.</h2>
-    <p class="sub">
-      تمثل PHK Ventures الذراع الاستثمارية الإستراتيجية لمنظومة PHK،
-      وتستثمر في الروبوتات والفضاء والطاقة والبنية التحتية المالية
-      برؤية صناعية طويلة الأمد.
-    </p>
-    <ul class="sub">
-      <li>استثمارات ملكية إستراتيجية</li>
-      <li>حصص مسيطرة وإدارة مباشرة</li>
-      <li>تمويل مشاريع صناعية كبرى</li>
-      <li>تعظيم التكامل داخل مجموعة PHK</li>
-    </ul>
-  </section>
+<div class="section">
+<h2 id="visionTitle"></h2>
+<p id="visionText"></p>
+</div>
 
-  <aside class="card">
-    <h3>مجالات الاستثمار</h3>
-    <div class="grid">
-      <div class="mini"><h3>الروبوتات والذكاء الاصطناعي</h3><p>صناعي، لوجستي، طبي، هيومانويد</p></div>
-      <div class="mini"><h3>صناعة الفضاء</h3><p>الإطلاق، الروبوتات المدارية، البنية التحتية</p></div>
-      <div class="mini"><h3>الطاقة والبنية التحتية</h3><p>طاقة متقدمة ومنشآت كبرى</p></div>
-      <div class="mini"><h3>المنصات المالية</h3><p>الخدمات المصرفية والبنية المالية</p></div>
-    </div>
-  </aside>
-
-  <section class="card" style="grid-column:1/-1">
-    <h3>التواصل</h3>
-    <p>
-      <a href="mailto:info@phkventures.com" style="color:var(--accent)">
-        info@phkventures.com
-      </a>
-    </p>
-  </section>
-</main>
-
-<footer>
-  <div>© <span id="y"></span> PHK Ventures</div>
-  <div>Email: info@phkventures.com</div>
-</footer>
+<div class="footer">
+<p id="contact"></p>
+© 2026 HK Ventures | Global Strategic Investment Group
+</div>
 
 </div>
 
 <script>
-  const map={en:"en-c",ko:"ko-c",ar:"ar-c"};
-  function setLang(l){
-    Object.values(map).forEach(id=>document.getElementById(id).classList.add("hide"));
-    document.getElementById(map[l]).classList.remove("hide");
-    ["en","ko","ar"].forEach(x=>document.getElementById(x).classList.remove("active"));
-    document.getElementById(l).classList.add("active");
-    document.documentElement.lang=l;
-    document.documentElement.dir=(l==="ar")?"rtl":"ltr";
-  }
-  document.getElementById("y").textContent=new Date().getFullYear();
+changeLanguage('ko');
 </script>
 
 </body>
